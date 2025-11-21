@@ -15,7 +15,7 @@
 
 ## 🚀 快速开始
 
-### 运行Demo
+### 运行项目
 
 直接打开 `index.html` 文件即可运行：
 
@@ -24,23 +24,28 @@
 双击 index.html 文件
 ```
 
-## 💡 数模一体化存储
+## 💡 技术特点
 
-###
+### 数模一体化存储
 
-与市面上大多数将数据以 JSON 导出并与模型分离的解决方案不同，本Demo利用 GLTF 文件格式的特性，在保存为 .glb 文件时通过增加数据节点来直接存储模型相关数据。这种方式避免了额外文件的维护，实现了数据与模型的统一管理。
+与市面上大多数将数据以 JSON 导出并与模型分离的解决方案不同，本项目利用 GLTF 文件格式的特性，在保存为 .glb 文件时通过增加数据节点来直接存储模型相关数据。这种方式避免了额外文件的维护，实现了数据与模型的统一管理。
 
-## 📁 Demo结构
+## 📁 项目结构
 
 ```
-Demo根目录/
+项目根目录/
 ├── models/             # 模型文件目录
 │   └── basic_sample_project.glb  # 示例 GLB 模型文件
 ├── index.html          # 主页面文件
-├── README.md           # Demo说明文档
+├── README.md           # 项目说明文档
 ├── script.js           # JavaScript 主程序
 └── style.css           # 样式文件
 ```
+
+## 🌐 代码仓库
+
+- **GitHub**: https://github.com/ViewSuSu/Su.ThreeJS.Demo
+- **Gitee**: https://gitee.com/SususuChang/su.-three-js.-demo
 
 ## 🛠 技术栈
 
