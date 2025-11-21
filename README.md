@@ -7,6 +7,10 @@
 - **GitHub**: https://github.com/ViewSuSu/Su.ThreeJS.Demo
 - **Gitee**: https://gitee.com/SususuChang/su.-three-js.-demo
 
+## 🎬 Demo 演示
+
+![Demo演示](Three.jsHD.gif)
+
 ## ✨ 功能特性
 
 - 🎯 **模型加载** - 支持 GLTF/GLB 格式的 3D 模型加载和显示
@@ -39,6 +43,7 @@
 
 ```
 项目根目录/
+├── .git/               # Git 版本控制目录
 ├── models/             # 模型文件目录
 │   └── basic_sample_project.glb  # 示例 GLB 模型文件
 ├── index.html          # 主页面文件
