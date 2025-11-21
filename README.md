@@ -1,5 +1,4 @@
-﻿
-# GLTF Viewer with Three.js
+﻿# GLTF Viewer with Three.js
 
 一个轻量级的 GLTF 模型查看器，基于 Three.js 构建。
 
@@ -12,32 +11,35 @@
 - ℹ️ **信息面板** - 可停靠的信息显示界面
 - 🌳 **结构树** - 模型层级结构树控件
 - 📦 **轻量依赖** - 最小化依赖，专注于核心功能
+- 🗂️ **数模一体** - 数据与模型一体化存储
 
 ## 🚀 快速开始
 
-### 运行项目
+### 运行Demo
 
 直接打开 `index.html` 文件即可运行：
 
+```bash
+# 在浏览器中直接打开
+双击 index.html 文件
+```
 
-### 使用说明
+## 💡 数模一体化存储
 
-1. 页面加载后会自动显示 3D 模型
-2. 使用鼠标拖拽来旋转查看模型
-3. 点击模型可以选中并高亮显示
-4. 查看信息面板获取模型详情
-5. 使用结构树浏览模型层级
+###
 
-## 📁 项目结构
+与市面上大多数将数据以 JSON 导出并与模型分离的解决方案不同，本Demo利用 GLTF 文件格式的特性，在保存为 .glb 文件时通过增加数据节点来直接存储模型相关数据。这种方式避免了额外文件的维护，实现了数据与模型的统一管理。
+
+## 📁 Demo结构
 
 ```
-项目根目录/
+Demo根目录/
 ├── models/             # 模型文件目录
-│   └── basic_sample_project.glb  # 示例 GLB 模型文件 (1.34 KB)
-├── index.html          # 主页面文件 (4 KB)
-├── README.md           # 项目说明文档 (1 KB)
-├── script.js           # JavaScript 主程序 (35 KB)
-└── style.css           # 样式文件 (11 KB)
+│   └── basic_sample_project.glb  # 示例 GLB 模型文件
+├── index.html          # 主页面文件
+├── README.md           # Demo说明文档
+├── script.js           # JavaScript 主程序
+└── style.css           # 样式文件
 ```
 
 ## 🛠 技术栈
