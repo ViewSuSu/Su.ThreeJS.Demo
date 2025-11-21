@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BIM轻量化、数模分离技术路径研究</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="header">
+        <h1>BIM轻量化、数模分离技术路径研究</h1>
+        <p>RST_basic_sample_project.glb</p>
+    </div>
+
+    <div class="main-container">
+        <!-- 左侧场景树 -->
+        <div class="scene-tree" id="scene-tree">
+            <div class="tree-header">
+                <h3>场景结构</h3>
+                <div class="tree-actions">
+                    <button id="expand-all" title="展开全部">📂</button>
+                    <button id="collapse-all" title="收起全部">📁</button>
+                </div>
+            </div>
+            <div id="scene-hierarchy" class="hierarchy-container">
+                <div class="loading-tree">加载中...</div>
+            </div>
+        </div>
+
+        <!-- 可拖拽的分隔条 -->
+        <div class="resize-handle" id="resize-handle"></div>
+
+        <!-- 右侧3D画布 -->
+        <div class="canvas-area" id="canvas-area">
+            <div id="canvas-container">
+                <div id="loading-overlay">
+                    <div id="loading-text">正在初始化3D场景...</div>
+                </div>
+            </div>
+
+            <div class="controls">
+                <button id="reset-view">重置视角</button>
+                <button id="enhance-lights" class="active">增强照明</button>
+                <button id="reduce-lights">减弱照明</button>
+                <button id="toggle-rotation">开始旋转</button>
+                <button id="reload-model">重新加载</button>
+            </div>
+
+            <div class="info">
+                <p>加载状态: <span id="loading-status">准备中...</span></p>
+                <p>模型信息: <span id="model-info">等待加载...</span></p>
+                <p id="error-info" class="error"></p>
+                <p>操作提示: 左键旋转 · 中键平移 · 滚轮缩放 · 右键无操作</p>
+            </div>
+        </div>
+    </div>
+
+<!-- Three.js 库 -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<!-- GLTFLoader -->
+<script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/loaders/GLTFLoader.js"></script>
+<!-- DRACOLoader -->
+<script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/loaders/DRACOLoader.js"></script>
+<!-- OrbitControls -->
+<script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
+
+    <!-- Three.js 库 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <!-- 使用正确的GLTFLoader -->
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/loaders/GLTFLoader.js"></script>
+    <!-- OrbitControls -->
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
+    
+    <script src="script.js"></script>
+</body>
+</html>
