@@ -7,8 +7,8 @@
 
 body {
     font-family: 'Microsoft YaHei', Arial, sans-serif;
-    background: linear-gradient(135deg, #1a2a6c, #b21f1f, #fdbb2d);
-    color: white;
+    background: linear-gradient(135deg, #e6f7ff, #b3e0ff, #99d6ff);
+    color: #333;
     overflow: hidden;
     min-height: 100vh;
     padding: 15px;
@@ -18,22 +18,25 @@ body {
 .header {
     text-align: center;
     padding: 15px;
-    background: rgba(0, 0, 0, 0.3);
+    background: rgba(255, 255, 255, 0.7);
     backdrop-filter: blur(10px);
     border-radius: 8px;
     margin-bottom: 15px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(173, 216, 230, 0.5);
 }
 
 .header h1 {
     font-size: 1.8em;
     margin-bottom: 8px;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+    color: #2c6aa0;
 }
 
 .header p {
     font-size: 1em;
-    opacity: 0.9;
+    opacity: 0.8;
+    color: #4a7ba6;
 }
 
 /* 主容器布局 */
@@ -41,9 +44,10 @@ body {
     display: flex;
     height: calc(100vh - 120px);
     gap: 0;
-    background: rgba(0, 0, 0, 0.2);
+    background: rgba(255, 255, 255, 0.5);
     border-radius: 8px;
     overflow: hidden;
+    border: 1px solid rgba(173, 216, 230, 0.5);
 }
 
 /* 左侧场景树 */
@@ -51,24 +55,24 @@ body {
     width: 320px;
     min-width: 250px;
     max-width: 500px;
-    background: rgba(0, 0, 0, 0.4);
+    background: rgba(230, 247, 255, 0.8);
     backdrop-filter: blur(10px);
     display: flex;
     flex-direction: column;
-    border-right: 1px solid rgba(255, 255, 255, 0.1);
+    border-right: 1px solid rgba(135, 206, 235, 0.5);
 }
 
 .tree-header {
     padding: 15px;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    border-bottom: 1px solid rgba(135, 206, 235, 0.5);
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: rgba(0, 0, 0, 0.3);
+    background: rgba(176, 224, 230, 0.6);
 }
 
 .tree-header h3 {
-    color: #4CAF50;
+    color: #2c6aa0;
     font-size: 1.1em;
     margin: 0;
 }
@@ -79,9 +83,9 @@ body {
 }
 
 .tree-actions button {
-    background: rgba(255, 255, 255, 0.1);
+    background: rgba(135, 206, 235, 0.3);
     border: none;
-    color: white;
+    color: #2c6aa0;
     padding: 5px 8px;
     border-radius: 4px;
     cursor: pointer;
@@ -90,7 +94,7 @@ body {
 }
 
 .tree-actions button:hover {
-    background: rgba(255, 255, 255, 0.2);
+    background: rgba(135, 206, 235, 0.5);
 }
 
 .hierarchy-container {
@@ -102,24 +106,25 @@ body {
 .hierarchy-item {
     padding: 8px 10px;
     margin: 3px 0;
-    background: rgba(255, 255, 255, 0.05);
+    background: rgba(255, 255, 255, 0.5);
     border-radius: 6px;
     cursor: pointer;
     transition: all 0.3s ease;
     border: 1px solid transparent;
     font-size: 0.9em;
     position: relative;
+    color: #2c6aa0;
 }
 
 .hierarchy-item:hover {
-    background: rgba(255, 255, 255, 0.1);
-    border-color: rgba(255, 255, 255, 0.2);
+    background: rgba(173, 216, 230, 0.4);
+    border-color: rgba(135, 206, 235, 0.5);
 }
 
 .hierarchy-item.selected {
-    background: rgba(76, 175, 80, 0.2);
-    border-color: #4CAF50;
-    box-shadow: 0 0 10px rgba(76, 175, 80, 0.3);
+    background: rgba(70, 130, 180, 0.2);
+    border-color: #4682b4;
+    box-shadow: 0 0 10px rgba(70, 130, 180, 0.3);
 }
 
 .hierarchy-item.highlighted {
@@ -128,29 +133,29 @@ body {
 
 @keyframes highlightPulse {
     0%, 100% { 
-        background: rgba(76, 175, 80, 0.2);
-        box-shadow: 0 0 10px rgba(76, 175, 80, 0.3);
+        background: rgba(70, 130, 180, 0.2);
+        box-shadow: 0 0 10px rgba(70, 130, 180, 0.3);
     }
     50% { 
-        background: rgba(76, 175, 80, 0.4);
-        box-shadow: 0 0 20px rgba(76, 175, 80, 0.6);
+        background: rgba(70, 130, 180, 0.4);
+        box-shadow: 0 0 20px rgba(70, 130, 180, 0.6);
     }
 }
 
 .hierarchy-item.mesh {
-    border-left: 3px solid #2196F3;
+    border-left: 3px solid #4682b4;
 }
 
 .hierarchy-item.light {
-    border-left: 3px solid #FFC107;
+    border-left: 3px solid #ffcc00;
 }
 
 .hierarchy-item.camera {
-    border-left: 3px solid #9C27B0;
+    border-left: 3px solid #9932cc;
 }
 
 .hierarchy-item.group {
-    border-left: 3px solid #FF9800;
+    border-left: 3px solid #ff8c00;
 }
 
 .hierarchy-name {
@@ -166,14 +171,14 @@ body {
 
 .hierarchy-children {
     margin-left: 15px;
-    border-left: 1px solid rgba(255, 255, 255, 0.1);
+    border-left: 1px solid rgba(135, 206, 235, 0.5);
     padding-left: 8px;
     margin-top: 5px;
 }
 
 .loading-tree {
     text-align: center;
-    color: #888;
+    color: #7ba7cc;
     font-style: italic;
     padding: 20px;
 }
@@ -181,14 +186,14 @@ body {
 /* 可拖拽分隔条 */
 .resize-handle {
     width: 8px;
-    background: rgba(255, 255, 255, 0.1);
+    background: rgba(135, 206, 235, 0.3);
     cursor: col-resize;
     transition: background 0.3s ease;
     position: relative;
 }
 
 .resize-handle:hover, .resize-handle.dragging {
-    background: rgba(76, 175, 80, 0.6);
+    background: rgba(70, 130, 180, 0.6);
 }
 
 .resize-handle::before {
@@ -198,7 +203,7 @@ body {
     left: 2px;
     right: 2px;
     height: 30px;
-    background: rgba(255, 255, 255, 0.3);
+    background: rgba(70, 130, 180, 0.5);
     border-radius: 2px;
     transform: translateY(-50%);
 }
@@ -217,10 +222,10 @@ body {
 #canvas-container {
     flex: 1;
     position: relative;
-    border: 2px solid rgba(255, 255, 255, 0.1);
+    border: 2px solid rgba(135, 206, 235, 0.5);
     border-radius: 8px;
     overflow: hidden;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
     background: #000;
     min-height: 300px;
 }
@@ -232,7 +237,7 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.9);
+    background: rgba(0, 0, 0, 0.8);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -242,10 +247,10 @@ body {
 }
 
 #loading-text {
-    background: rgba(0, 0, 0, 0.8);
+    background: rgba(70, 130, 180, 0.8);
     padding: 15px 30px;
     border-radius: 8px;
-    border: 2px solid #4CAF50;
+    border: 2px solid #87ceeb;
     text-align: center;
 }
 
@@ -256,15 +261,15 @@ body {
     right: 20px;
     width: 350px;
     max-height: 400px;
-    background: rgba(0, 0, 0, 0.9);
+    background: rgba(230, 247, 255, 0.95);
     backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.3);
+    border: 1px solid rgba(135, 206, 235, 0.7);
     border-radius: 10px;
-    color: white;
+    color: #2c6aa0;
     font-family: 'Microsoft YaHei', Arial, sans-serif;
     z-index: 100;
     display: none;
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.6);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
     overflow: hidden;
 }
 
@@ -273,21 +278,21 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 15px 20px;
-    background: rgba(76, 175, 80, 0.4);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    background: rgba(70, 130, 180, 0.4);
+    border-bottom: 1px solid rgba(135, 206, 235, 0.5);
 }
 
 .parameters-header h4 {
     margin: 0;
     font-size: 1.1em;
-    color: #fff;
+    color: #2c6aa0;
     font-weight: bold;
 }
 
 .close-btn {
-    background: rgba(255, 255, 255, 0.2);
+    background: rgba(135, 206, 235, 0.5);
     border: none;
-    color: white;
+    color: #2c6aa0;
     font-size: 1.3em;
     cursor: pointer;
     padding: 0;
@@ -301,7 +306,7 @@ body {
 }
 
 .close-btn:hover {
-    background: rgba(255, 255, 255, 0.3);
+    background: rgba(135, 206, 235, 0.7);
     transform: scale(1.1);
 }
 
@@ -313,11 +318,11 @@ body {
 
 .object-info {
     padding: 12px 20px;
-    background: rgba(33, 150, 243, 0.3);
-    color: #fff;
+    background: rgba(135, 206, 235, 0.4);
+    color: #2c6aa0;
     font-weight: bold;
     font-size: 0.95em;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    border-bottom: 1px solid rgba(135, 206, 235, 0.3);
 }
 
 .parameters-list {
@@ -332,13 +337,13 @@ body {
     justify-content: space-between;
     align-items: flex-start;
     padding: 10px 20px;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    border-bottom: 1px solid rgba(135, 206, 235, 0.3);
     transition: background-color 0.2s ease;
     gap: 15px;
 }
 
 .parameter-item:hover {
-    background: rgba(255, 255, 255, 0.08);
+    background: rgba(173, 216, 230, 0.2);
 }
 
 .parameter-item:last-child {
@@ -346,7 +351,7 @@ body {
 }
 
 .param-name {
-    color: #FFC107;
+    color: #4682b4;
     font-weight: 600;
     font-size: 0.9em;
     flex-shrink: 0;
@@ -354,7 +359,7 @@ body {
 }
 
 .param-value {
-    color: #E0E0E0;
+    color: #4a7ba6;
     font-size: 0.9em;
     text-align: right;
     word-break: break-word;
@@ -363,7 +368,7 @@ body {
 
 .no-parameters {
     text-align: center;
-    color: #aaa;
+    color: #7ba7cc;
     font-style: italic;
     padding: 40px 20px;
     font-size: 0.95em;
@@ -376,15 +381,16 @@ body {
     flex-wrap: wrap;
     gap: 8px;
     padding: 12px;
-    background: rgba(255, 255, 255, 0.08);
+    background: rgba(230, 247, 255, 0.7);
     border-radius: 8px;
     backdrop-filter: blur(5px);
+    border: 1px solid rgba(173, 216, 230, 0.5);
 }
 
 .controls button {
-    background: rgba(255, 255, 255, 0.1);
-    color: white;
-    border: 1px solid rgba(255, 255, 255, 0.2);
+    background: rgba(135, 206, 235, 0.3);
+    color: #2c6aa0;
+    border: 1px solid rgba(135, 206, 235, 0.5);
     padding: 8px 16px;
     border-radius: 6px;
     cursor: pointer;
@@ -394,14 +400,14 @@ body {
 }
 
 .controls button:hover {
-    background: rgba(255, 255, 255, 0.2);
+    background: rgba(135, 206, 235, 0.5);
     transform: translateY(-1px);
 }
 
 .controls button.active {
-    background: rgba(76, 175, 80, 0.3);
-    border-color: #4CAF50;
-    box-shadow: 0 0 10px rgba(76, 175, 80, 0.3);
+    background: rgba(70, 130, 180, 0.3);
+    border-color: #4682b4;
+    box-shadow: 0 0 10px rgba(70, 130, 180, 0.3);
 }
 
 .controls button:active {
@@ -411,10 +417,12 @@ body {
 /* 信息显示 */
 .info {
     padding: 12px;
-    background: rgba(0, 0, 0, 0.3);
+    background: rgba(230, 247, 255, 0.7);
     border-radius: 8px;
     backdrop-filter: blur(5px);
     font-size: 0.85em;
+    border: 1px solid rgba(173, 216, 230, 0.5);
+    color: #2c6aa0;
 }
 
 .info p {
@@ -424,17 +432,17 @@ body {
 
 #loading-status, #model-info {
     font-weight: bold;
-    color: #4CAF50;
+    color: #4682b4;
 }
 
 /* 错误信息样式 */
 .error {
-    color: #ff4444;
+    color: #d9534f;
     font-weight: bold;
-    background: rgba(255, 68, 68, 0.1);
+    background: rgba(217, 83, 79, 0.1);
     padding: 8px;
     border-radius: 4px;
-    border: 1px solid #ff4444;
+    border: 1px solid #d9534f;
     display: none;
 }
 
@@ -446,19 +454,19 @@ body {
 
 .hierarchy-container::-webkit-scrollbar-track,
 .parameters-list::-webkit-scrollbar-track {
-    background: rgba(255, 255, 255, 0.1);
+    background: rgba(135, 206, 235, 0.2);
     border-radius: 3px;
 }
 
 .hierarchy-container::-webkit-scrollbar-thumb,
 .parameters-list::-webkit-scrollbar-thumb {
-    background: rgba(255, 255, 255, 0.3);
+    background: rgba(70, 130, 180, 0.5);
     border-radius: 3px;
 }
 
 .hierarchy-container::-webkit-scrollbar-thumb:hover,
 .parameters-list::-webkit-scrollbar-thumb:hover {
-    background: rgba(255, 255, 255, 0.5);
+    background: rgba(70, 130, 180, 0.7);
 }
 
 /* 响应式设计 */
@@ -522,20 +530,20 @@ body {
 /* 参数组样式 */
 .parameter-group {
     margin-bottom: 15px;
-    border: 1px solid rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(135, 206, 235, 0.5);
     border-radius: 6px;
     overflow: hidden;
 }
 
 .group-name {
-    background: rgba(76, 175, 80, 0.3);
+    background: rgba(70, 130, 180, 0.3);
     padding: 8px 15px;
     font-weight: bold;
-    color: #fff;
+    color: #2c6aa0;
     font-size: 0.9em;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    border-bottom: 1px solid rgba(135, 206, 235, 0.3);
 }
 
 .group-parameters {
-    background: rgba(255, 255, 255, 0.05);
+    background: rgba(230, 247, 255, 0.7);
 }
