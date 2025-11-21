@@ -2,6 +2,11 @@
 
 一个轻量级的 GLTF 模型查看器，基于 Three.js 构建。
 
+## 🌐 代码仓库
+
+- **GitHub**: https://github.com/ViewSuSu/Su.ThreeJS.Demo
+- **Gitee**: https://gitee.com/SususuChang/su.-three-js.-demo
+
 ## ✨ 功能特性
 
 - 🎯 **模型加载** - 支持 GLTF/GLB 格式的 3D 模型加载和显示
@@ -41,11 +46,6 @@
 ├── script.js           # JavaScript 主程序
 └── style.css           # 样式文件
 ```
-
-## 🌐 代码仓库
-
-- **GitHub**: https://github.com/ViewSuSu/Su.ThreeJS.Demo
-- **Gitee**: https://gitee.com/SususuChang/su.-three-js.-demo
 
 ## 🛠 技术栈
 
