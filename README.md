@@ -11,7 +11,9 @@
 
 ## 🎬 Demo 演示
 
-![Demo演示](Three.jsHD.gif)
+<div align="center">
+  <img src="./Three.jsHD.gif" alt="Demo演示" width="80%">
+</div>
 
 ## ✨ 功能特性
 
