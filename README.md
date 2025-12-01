@@ -1,4 +1,6 @@
-﻿# GLTF Viewer with Three.js
+![License](https://img.shields.io/badge/license-MIT-blue)
+
+# GLTF Viewer with Three.js
 
 一个轻量级的 GLTF 模型查看器，基于 Three.js 构建。
 
@@ -64,10 +66,6 @@
 - **鼠标滚轮**: 缩放视图
 - **点击模型**: 选中并高亮
 - **结构树点击**: 浏览模型组件
-
-## 📄 许可证
-
-MIT License
 
 ## 🤝 贡献
 
